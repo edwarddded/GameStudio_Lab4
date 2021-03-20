@@ -43,6 +43,7 @@ GameObject:
   - component: {fileID: 8211049744639593987}
   - component: {fileID: 8211049744639593986}
   - component: {fileID: 6772494727832429292}
+  - component: {fileID: 4539154619840495329}
   m_Layer: 0
   m_Name: PlayerPrefabs
   m_TagString: Untagged
@@ -164,3 +165,19 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   FirePoint: {fileID: 0}
   BulletPrefabs: {fileID: 0}
+--- !u!58 &4539154619840495329
+CircleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8211049744639593985}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  serializedVersion: 2
+  m_Radius: 0.5
