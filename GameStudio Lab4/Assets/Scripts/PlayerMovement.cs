@@ -7,12 +7,11 @@ public class PlayerMovement : MonoBehaviour
     public float MoveSpeed;
     public Rigidbody2D rb;
     private Vector2 MoveDirection;
-    public CircleCollider2D edg;
     // Start is called before the first frame update
 
     private void Start()
     {
-        edg = GetComponent<CircleCollider2D>();
+
     }
     // Update is called once per frame
     void Update()
@@ -44,5 +43,12 @@ public class PlayerMovement : MonoBehaviour
     private void Move()
     {
         rb.velocity = new Vector2(MoveDirection.x * MoveSpeed, MoveDirection.y * MoveSpeed);
+    }
+    private void OnCollisionEnter(Collision collision)
+    {
+        if (collision.gameObject.tag == "Enemy")
+        {
+            Debug.Log("GameOver");
+        }
     }
 }
