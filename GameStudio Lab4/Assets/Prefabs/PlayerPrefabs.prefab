@@ -124,11 +124,12 @@ MonoBehaviour:
   m_GameObject: {fileID: 8211049744639593985}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f29e552a44d6db34f992aaceb315080d, type: 3}
+  m_Script: {fileID: 11500000, guid: 1141af19b0e8e5b45a5d4f8569d8112e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  MoveSpeed: 5
-  rb: {fileID: 8211049744639593986}
+  FirePoint: {fileID: 2632072383544293911}
+  BulletPrefabs: {fileID: 5328340630923389168, guid: 5b2a0b0795603374e960691f3d9e667b,
+    type: 3}
 --- !u!50 &8211049744639593986
 Rigidbody2D:
   serializedVersion: 4
@@ -159,8 +160,8 @@ MonoBehaviour:
   m_GameObject: {fileID: 8211049744639593985}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ba35842144370194e93c21123b42878c, type: 3}
+  m_Script: {fileID: 11500000, guid: c1ea0db49b0ba88439aa53a85be35c94, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  FirePoint: {fileID: 0}
-  BulletPrefabs: {fileID: 0}
+  MoveSpeed: 5
+  rb: {fileID: 8211049744639593986}
