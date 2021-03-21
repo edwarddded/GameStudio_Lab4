@@ -13,6 +13,7 @@ public class Patrol : MonoBehaviour
     public float maxX;
     public float minY;
     public float maxY;
+    public GameObject enemy;
 
     //public Transform Enemy;
 
@@ -47,7 +48,9 @@ public class Patrol : MonoBehaviour
         {
             Destroy(gameObject);
             Destroy(collision.gameObject);
+            Instantiate(enemy, new Vector3(Random.Range(-8, 8), 1), Quaternion.identity);
+
         }
-        
+
     }
 }
