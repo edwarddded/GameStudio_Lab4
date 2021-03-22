@@ -5,7 +5,11 @@ using UnityEngine.UI;
 using UnityEngine.SceneManagement;
 
 public class Patrol : MonoBehaviour
-{   
+{
+    //GameManager, this object will be called to handle score and enemy spawning
+    public GameObject gcObject;
+    public GameController gc;
+
     public float speed;
     private float WaitTime;
     public float startWaitTime;
@@ -16,19 +20,19 @@ public class Patrol : MonoBehaviour
     public float minY;
     public float maxY;
 
-    //public Animator enemyani;
-    public Text text;
-    public float score;
-    float life = 3;
-    public GameObject enemyboss;
+    public float life;
     public GameObject parachute;
-   //private Animator anim;
+
     // Start is called before the first frame update
     void Start()
     {
+        gcObject = GameObject.FindGameObjectWithTag("GameController");
+
+        if(gcObject != null)
+        gc = gcObject.GetComponent<GameController>();
+
         WaitTime = startWaitTime;
         moveSpot.position = new Vector2(Random.Range(minX, maxX), Random.Range(minY, maxY));
-        //anim = GetComponent<Animator>();
         
     }
     // Update is called once per frame
@@ -48,48 +52,28 @@ public class Patrol : MonoBehaviour
                 WaitTime -= Time.deltaTime;
             }
         }
-        
-        
+    }
 
-    }
     private void OnCollisionEnter2D(Collision2D collision)
-    {
-        if (collision.gameObject.tag == "Bullet" && gameObject.tag == "Enemy")
-        {
-            Destroy(gameObject);
-            Destroy(collision.gameObject);
-            GameObject parachute1 = (GameObject)(Instantiate(parachute, gameObject.transform.position, Quaternion.identity));
-            //anim.SetBool("isShot", true);
-            playerscore();
-            Destroy(parachute1,0.5f);
-            if (score <17)
+    { 
+        if (gcObject != null && gc != null) {
+            if (collision.gameObject.tag == "Bullet")
             {
-                GameObject enemy = (GameObject)(Instantiate(gameObject, new Vector2(0.3f, 1.66f), Quaternion.identity));
-                enemy.GetComponent<SpriteRenderer>().flipY = true;
-                enemy.GetComponent<Patrol>().enabled = true;
-                enemy.GetComponent<Patrol>().speed = speed;
-                enemy.GetComponent<CircleCollider2D>().enabled = true;
-            }
-            if (score == 16)
-            {
-                Instantiate(enemyboss, new Vector2(0.3f, 1.66f), Quaternion.identity);
-            }
-        }
-        if (collision.gameObject.tag == "Bullet" && gameObject.tag == "enemyboos")
-        {
-            Destroy(collision.gameObject);
-            life = life - 1;
-                if (life == 0)
+                gc.AddToScore();
+                Destroy(collision.gameObject);
+                life = life - 1;
+
+                if (life <= 0)
                 {
-                Destroy(gameObject);
-                SceneManager.LoadScene(3);
+                    gc.enemyDestroyed();
+                    Destroy(this.gameObject);
+
+                    GameObject parachute1 = (GameObject)(Instantiate(parachute, gameObject.transform.position, Quaternion.identity));
+                    Destroy(parachute1, 1);
+
+                }
+
             }
-            
         }
-    }
-    void playerscore()
-    {
-        score++;
-        text.text = "Score:" + score.ToString();
     }
 }
