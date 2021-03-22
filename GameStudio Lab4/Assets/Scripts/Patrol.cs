@@ -21,6 +21,7 @@ public class Patrol : MonoBehaviour
     public float score;
     float life = 3;
     public GameObject enemyboss;
+    public GameObject parachute;
     // Start is called before the first frame update
     void Start()
     {
@@ -55,7 +56,9 @@ public class Patrol : MonoBehaviour
         {
             Destroy(gameObject);
             Destroy(collision.gameObject);
+            GameObject parachute1 = (GameObject)(Instantiate(parachute, gameObject.transform.position, Quaternion.identity));
             playerscore();
+            Destroy(parachute1,1);
             if (score <17)
             {
                 GameObject enemy = (GameObject)(Instantiate(gameObject, new Vector2(0.3f, 1.66f), Quaternion.identity));
