@@ -113,8 +113,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   gcObject: {fileID: 0}
-  gc: {fileID: 0}
-  speed: 5
+  gc: {fileID: 7778260228098725815, guid: 911c11552922e0b48b23bd9f69ec421c, type: 3}
+  speed: 3
   startWaitTime: 0.5
   moveSpot: {fileID: 1080184248861136606, guid: 980e4a86cc76b6d488e6b91466198ad6,
     type: 3}

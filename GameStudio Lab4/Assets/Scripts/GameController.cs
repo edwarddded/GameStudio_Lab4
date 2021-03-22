@@ -19,7 +19,7 @@ public class GameController : MonoBehaviour
     private Camera cam;
 
     public GameObject RadarSweeper;
-
+    public Patrol PT;
     void Start()
     {
         round = 1;
@@ -76,7 +76,7 @@ public class GameController : MonoBehaviour
         {
             
             Instantiate(enemyLarge, spawnPosition, transform.rotation * Quaternion.Euler(0, 0, -180));
-
+            enemyLarge.GetComponent<Patrol>().speed = PT.speed;
 
         }
         else if(isNight){
@@ -84,6 +84,7 @@ public class GameController : MonoBehaviour
 
             GameObject enemy = (GameObject) Instantiate(enemySmall, spawnPosition, transform.rotation * Quaternion.Euler(0, 0, -180));
             enemy.GetComponent<SpriteRenderer>().color = new Color(0, 0, 0);
+            enemy.GetComponent<Patrol>().speed = PT.speed;
             // enemy.GetComponent<SpriteRenderer>().color = new Color(0.4325, 0.4325, 0.4325, 1);
         }
         else{

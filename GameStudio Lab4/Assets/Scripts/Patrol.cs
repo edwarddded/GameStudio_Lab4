@@ -10,7 +10,7 @@ public class Patrol : MonoBehaviour
     public GameObject gcObject;
     public GameController gc;
 
-    public float speed;
+    public float speed = 3;
     private float WaitTime;
     public float startWaitTime;
 
