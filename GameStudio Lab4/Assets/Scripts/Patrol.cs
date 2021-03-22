@@ -22,11 +22,13 @@ public class Patrol : MonoBehaviour
     float life = 3;
     public GameObject enemyboss;
     public GameObject parachute;
+   //private Animator anim;
     // Start is called before the first frame update
     void Start()
     {
         WaitTime = startWaitTime;
         moveSpot.position = new Vector2(Random.Range(minX, maxX), Random.Range(minY, maxY));
+        //anim = GetComponent<Animator>();
         
     }
     // Update is called once per frame
@@ -57,6 +59,7 @@ public class Patrol : MonoBehaviour
             Destroy(gameObject);
             Destroy(collision.gameObject);
             GameObject parachute1 = (GameObject)(Instantiate(parachute, gameObject.transform.position, Quaternion.identity));
+            //anim.SetBool("isShot", true);
             playerscore();
             Destroy(parachute1,1);
             if (score <17)
