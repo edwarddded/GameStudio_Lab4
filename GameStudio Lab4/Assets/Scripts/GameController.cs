@@ -71,11 +71,6 @@ public class GameController : MonoBehaviour
         }
     }
 
-    public void gameOver()
-    {
-        // function is called when the player is hit
-    }
-
     public void AddToScore()
     {
         score++;
