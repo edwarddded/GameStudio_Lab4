@@ -608,6 +608,12 @@ PrefabInstance:
         type: 3}
     - target: {fileID: 785662320916425074, guid: 70eb7c71b7c6ed14da36b1b8ac5548e7,
         type: 3}
+      propertyPath: parachute
+      value: 
+      objectReference: {fileID: 2134911379592224969, guid: 98e015a747a601e43a131cfc3c1e3215,
+        type: 3}
+    - target: {fileID: 785662320916425074, guid: 70eb7c71b7c6ed14da36b1b8ac5548e7,
+        type: 3}
       propertyPath: startWaitTime
       value: 0.5
       objectReference: {fileID: 0}
