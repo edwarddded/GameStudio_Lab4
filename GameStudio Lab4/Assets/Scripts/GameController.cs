@@ -12,15 +12,11 @@ public class GameController : MonoBehaviour
 
     public Text text;
     public float score;
-    public GameObject CameraGameObject;
-    private Camera cam;
 
     void Start()
     {
         round = 1;
         isNight = false;
-
-        cam = CameraGameObject.GetComponent<Camera>();
     }
 
     void Update()
@@ -37,15 +33,9 @@ public class GameController : MonoBehaviour
         round += 1;
 
         if (round >= 6 && round <= 9)
-        {
             isNight = true;
-            cam.backgroundColor = new Color(0, 0, 0);
-        }
-        else
-        {
+        else 
             isNight = false;
-            cam.backgroundColor = new Color(0, 0.09803922f, 0.4862745f);
-        }
 
         spawnNewEnemy();
 
@@ -62,7 +52,6 @@ public class GameController : MonoBehaviour
         }
         else if(isNight){
             // check to see if game is in night mode and spawn dark enemy
-
             Instantiate(enemySmall, spawnPosition, transform.rotation * Quaternion.Euler(0, 0, -180));
         }
         else{

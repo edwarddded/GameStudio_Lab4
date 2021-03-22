@@ -67,10 +67,8 @@ public class Patrol : MonoBehaviour
                 {
                     gc.enemyDestroyed();
                     Destroy(this.gameObject);
-
                     GameObject parachute1 = (GameObject)(Instantiate(parachute, gameObject.transform.position, Quaternion.identity));
                     Destroy(parachute1, 1);
-
                 }
 
             }
