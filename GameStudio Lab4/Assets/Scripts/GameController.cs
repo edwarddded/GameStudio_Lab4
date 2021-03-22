@@ -11,6 +11,8 @@ public class GameController : MonoBehaviour
     public GameObject enemyLarge;
 
     public Text text;
+    public Text Hightext;
+    public float highscore;
     public float score;
 
     public GameObject CameraGameObject;
@@ -26,11 +28,20 @@ public class GameController : MonoBehaviour
         RadarSweeper.SetActive(false);
 
         cam = CameraGameObject.GetComponent<Camera>();
+        highscore = PlayerPrefs.GetFloat("HighScore");
+        Hightext.text = "HighestScore:" + highscore;
     }
 
     void Update()
     {
-        
+        if (score > highscore )
+        {
+            highscore = score;
+            Hightext.text = "HighestScore:" + score.ToString();
+
+            PlayerPrefs.SetFloat("HighScore", highscore);
+            PlayerPrefs.Save();
+        }
     }
 
     public void enemyDestroyed() {
@@ -85,5 +96,6 @@ public class GameController : MonoBehaviour
     {
         score++;
         text.text = "Score:" + score.ToString();
+        
     }
 }
