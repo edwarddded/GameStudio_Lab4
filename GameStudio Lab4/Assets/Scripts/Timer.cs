@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using DentedPixel;
+using UnityEngine.SceneManagement;
 
 public class Timer : MonoBehaviour
 {
@@ -23,7 +24,7 @@ public class Timer : MonoBehaviour
 
         if (timer<0f)
         {
-            Debug.Log("GameOver");
+            SceneManager.LoadScene(2);
         }
         
     }

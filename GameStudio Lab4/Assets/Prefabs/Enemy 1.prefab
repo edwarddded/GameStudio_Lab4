@@ -119,5 +119,6 @@ MonoBehaviour:
   maxX: 8.22
   minY: -2.26
   maxY: 4.45
-  Enemy: {fileID: 0}
-  EnemyPrefabs: {fileID: 0}
+  text: {fileID: 0}
+  score: 0
+  enemyboss: {fileID: 0}

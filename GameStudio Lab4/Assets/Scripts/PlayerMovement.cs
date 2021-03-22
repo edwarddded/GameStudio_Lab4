@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class PlayerMovement : MonoBehaviour
 {
@@ -29,6 +30,11 @@ public class PlayerMovement : MonoBehaviour
         if (collision.gameObject.tag == "Boundaries")
         {
             Debug.Log(collision.gameObject.name);
+        }
+        if (collision.gameObject.tag == "Enemy")
+        {
+            Destroy(gameObject);
+            SceneManager.LoadScene(2);
         }
     }
 
