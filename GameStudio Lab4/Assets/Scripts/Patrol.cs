@@ -61,7 +61,7 @@ public class Patrol : MonoBehaviour
             GameObject parachute1 = (GameObject)(Instantiate(parachute, gameObject.transform.position, Quaternion.identity));
             //anim.SetBool("isShot", true);
             playerscore();
-            Destroy(parachute1,1);
+            Destroy(parachute1,0.5f);
             if (score <17)
             {
                 GameObject enemy = (GameObject)(Instantiate(gameObject, new Vector2(0.3f, 1.66f), Quaternion.identity));

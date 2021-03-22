@@ -10,6 +10,8 @@ GameObject:
   m_Component:
   - component: {fileID: 9047658593166332871}
   - component: {fileID: 6259146469449697399}
+  - component: {fileID: -788495663144273310}
+  - component: {fileID: -8523021124016461412}
   m_Layer: 0
   m_Name: Parachute
   m_TagString: Untagged
@@ -81,3 +83,34 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &-788495663144273310
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2134911379592224969}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d3ec3342cfe2f4323895b854095f9ec7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!95 &-8523021124016461412
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2134911379592224969}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 33b5dc0036674d04a85820d0bff35adf, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
