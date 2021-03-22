@@ -61,7 +61,7 @@ public class Patrol : MonoBehaviour
             Destroy(parachute1,1);
             if (score <17)
             {
-                GameObject enemy = (GameObject)(Instantiate(gameObject, new Vector2(0.3f, 1.66f), Quaternion.identity));
+                GameObject enemy = (GameObject)(Instantiate(gameObject, new Vector2(Random.Range(-8f, 8f), Random.Range(-1f, 4.5f)), Quaternion.identity));
                 enemy.GetComponent<SpriteRenderer>().flipY = true;
                 enemy.GetComponent<Patrol>().enabled = true;
                 enemy.GetComponent<Patrol>().speed = speed;
