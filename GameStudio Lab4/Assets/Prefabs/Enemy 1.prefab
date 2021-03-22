@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 5856093584152667044}
   - component: {fileID: 5856093584152667045}
   - component: {fileID: 785662320916425074}
+  - component: {fileID: 8302855725433904999}
   m_Layer: 0
   m_Name: Enemy 1
   m_TagString: Enemy
@@ -113,8 +114,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   gcObject: {fileID: 0}
   gc: {fileID: 0}
-  speed: 3
-  startWaitTime: 1
+  speed: 5
+  startWaitTime: 0.5
   moveSpot: {fileID: 1080184248861136606, guid: 980e4a86cc76b6d488e6b91466198ad6,
     type: 3}
   minX: -8.22
@@ -124,3 +125,24 @@ MonoBehaviour:
   life: 1
   parachute: {fileID: 2134911379592224969, guid: 98e015a747a601e43a131cfc3c1e3215,
     type: 3}
+--- !u!50 &8302855725433904999
+Rigidbody2D:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5856093584152667047}
+  m_BodyType: 1
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDrag: 0
+  m_AngularDrag: 0.05
+  m_GravityScale: 1
+  m_Material: {fileID: 0}
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 0

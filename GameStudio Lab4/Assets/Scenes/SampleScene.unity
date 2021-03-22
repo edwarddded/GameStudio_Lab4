@@ -488,19 +488,13 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 588874885}
   m_CullTransparentMesh: 0
---- !u!1 &624496763 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 5856093584152667047, guid: 70eb7c71b7c6ed14da36b1b8ac5548e7,
-    type: 3}
-  m_PrefabInstance: {fileID: 735742582}
-  m_PrefabAsset: {fileID: 0}
 --- !u!114 &624496764 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 785662320916425074, guid: 70eb7c71b7c6ed14da36b1b8ac5548e7,
     type: 3}
   m_PrefabInstance: {fileID: 735742582}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 624496763}
+  m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: a05a04e1513fa4a41b5b2570ad8dbcf5, type: 3}
@@ -666,53 +660,6 @@ PrefabInstance:
       propertyPath: gc
       value: 
       objectReference: {fileID: 803604718}
-    - target: {fileID: 785662320916425074, guid: 70eb7c71b7c6ed14da36b1b8ac5548e7,
-        type: 3}
-      propertyPath: gm
-      value: 
-      objectReference: {fileID: 803604717}
-    - target: {fileID: 785662320916425074, guid: 70eb7c71b7c6ed14da36b1b8ac5548e7,
-        type: 3}
-      propertyPath: life
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 785662320916425074, guid: 70eb7c71b7c6ed14da36b1b8ac5548e7,
-        type: 3}
-      propertyPath: text
-      value: 
-      objectReference: {fileID: 633976689}
-    - target: {fileID: 785662320916425074, guid: 70eb7c71b7c6ed14da36b1b8ac5548e7,
-        type: 3}
-      propertyPath: enemy
-      value: 
-      objectReference: {fileID: 624496763}
-    - target: {fileID: 785662320916425074, guid: 70eb7c71b7c6ed14da36b1b8ac5548e7,
-        type: 3}
-      propertyPath: speed
-      value: 5
-      objectReference: {fileID: 0}
-    - target: {fileID: 785662320916425074, guid: 70eb7c71b7c6ed14da36b1b8ac5548e7,
-        type: 3}
-      propertyPath: enemyani
-      value: 
-      objectReference: {fileID: 0}
-    - target: {fileID: 785662320916425074, guid: 70eb7c71b7c6ed14da36b1b8ac5548e7,
-        type: 3}
-      propertyPath: enemyboss
-      value: 
-      objectReference: {fileID: 3810794175792887843, guid: 114238eadf246ff4faf82eaec31d745f,
-        type: 3}
-    - target: {fileID: 785662320916425074, guid: 70eb7c71b7c6ed14da36b1b8ac5548e7,
-        type: 3}
-      propertyPath: parachute
-      value: 
-      objectReference: {fileID: 2134911379592224969, guid: 98e015a747a601e43a131cfc3c1e3215,
-        type: 3}
-    - target: {fileID: 785662320916425074, guid: 70eb7c71b7c6ed14da36b1b8ac5548e7,
-        type: 3}
-      propertyPath: startWaitTime
-      value: 0.5
-      objectReference: {fileID: 0}
     - target: {fileID: 5856093584152667047, guid: 70eb7c71b7c6ed14da36b1b8ac5548e7,
         type: 3}
       propertyPath: m_Name
@@ -1013,6 +960,7 @@ MonoBehaviour:
   text: {fileID: 633976689}
   score: 0
   CameraGameObject: {fileID: 519420028}
+  RadarSweeper: {fileID: 1615938756}
 --- !u!4 &803604719
 Transform:
   m_ObjectHideFlags: 0

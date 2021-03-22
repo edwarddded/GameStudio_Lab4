@@ -12,13 +12,18 @@ public class GameController : MonoBehaviour
 
     public Text text;
     public float score;
+
     public GameObject CameraGameObject;
     private Camera cam;
+
+    public GameObject RadarSweeper;
 
     void Start()
     {
         round = 1;
+        score = 0;
         isNight = false;
+        RadarSweeper.SetActive(false);
 
         cam = CameraGameObject.GetComponent<Camera>();
     }
@@ -40,11 +45,13 @@ public class GameController : MonoBehaviour
         {
             isNight = true;
             cam.backgroundColor = new Color(0, 0, 0);
+            RadarSweeper.SetActive(true);
         }
         else
         {
             isNight = false;
             cam.backgroundColor = new Color(0, 0.09803922f, 0.4862745f);
+            RadarSweeper.SetActive(false);
         }
 
         spawnNewEnemy();
@@ -63,7 +70,9 @@ public class GameController : MonoBehaviour
         else if(isNight){
             // check to see if game is in night mode and spawn dark enemy
 
-            Instantiate(enemySmall, spawnPosition, transform.rotation * Quaternion.Euler(0, 0, -180));
+            GameObject enemy = (GameObject) Instantiate(enemySmall, spawnPosition, transform.rotation * Quaternion.Euler(0, 0, -180));
+            enemy.GetComponent<SpriteRenderer>().color = new Color(0, 0, 0);
+            // enemy.GetComponent<SpriteRenderer>().color = new Color(0.4325, 0.4325, 0.4325, 1);
         }
         else{
             // otherwise spawn a regular enemy 
