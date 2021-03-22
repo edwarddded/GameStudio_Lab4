@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class GameController : MonoBehaviour
 {
@@ -8,6 +9,9 @@ public class GameController : MonoBehaviour
     public bool isNight;
     public GameObject enemySmall;
     public GameObject enemyLarge;
+
+    public Text text;
+    public float score;
 
     void Start()
     {
@@ -48,7 +52,7 @@ public class GameController : MonoBehaviour
         }
         else if(isNight){
             // check to see if game is in night mode and spawn dark enemy
-
+            Instantiate(enemySmall, spawnPosition, transform.rotation * Quaternion.Euler(0, 0, -180));
         }
         else{
             // otherwise spawn a regular enemy 
@@ -59,5 +63,11 @@ public class GameController : MonoBehaviour
     public void gameOver()
     {
         // function is called when the player is hit
+    }
+
+    public void AddToScore()
+    {
+        score++;
+        text.text = "Score:" + score.ToString();
     }
 }
