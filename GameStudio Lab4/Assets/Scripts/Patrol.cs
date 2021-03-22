@@ -61,6 +61,7 @@ public class Patrol : MonoBehaviour
                 GameObject enemy = (GameObject)(Instantiate(gameObject, new Vector2(0.3f, 1.66f), Quaternion.identity));
                 enemy.GetComponent<SpriteRenderer>().flipY = true;
                 enemy.GetComponent<Patrol>().enabled = true;
+                enemy.GetComponent<Patrol>().speed = speed;
                 enemy.GetComponent<CircleCollider2D>().enabled = true;
             }
             if (score == 16)
