@@ -66,6 +66,7 @@ public class GameController : MonoBehaviour
             
             Instantiate(enemyLarge, spawnPosition, transform.rotation * Quaternion.Euler(0, 0, -180));
 
+
         }
         else if(isNight){
             // check to see if game is in night mode and spawn dark enemy
