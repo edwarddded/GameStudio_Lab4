@@ -16,10 +16,7 @@ public class Cloud : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (cloudL.transform.position.y < -6.7)
-        {
-            Destroy(cloudL);
-        }
+        
     }
     public void CreateCloud()
     {
