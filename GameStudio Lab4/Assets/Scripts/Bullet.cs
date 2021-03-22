@@ -12,5 +12,11 @@ public class Bullet : MonoBehaviour
         rb.velocity = transform.up * speed;
     }
 
-    
+    private void OnCollisionEnter2D(Collision2D collision)
+    {
+        if (collision.gameObject.tag =="Boundaries")
+        {
+            Destroy(gameObject);
+        }
+    }
 }

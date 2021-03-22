@@ -8,19 +8,30 @@ public class PlayerMovement : MonoBehaviour
     public Rigidbody2D rb;
     private Vector2 MoveDirection;
     // Start is called before the first frame update
-   
 
+    private void Start()
+    {
+
+    }
     // Update is called once per frame
     void Update()
     {
         ProcessInput();
+       
     }
 
     private void FixedUpdate()
     {
         Move();
     }
-    
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (collision.gameObject.tag == "Boundaries")
+        {
+            Debug.Log(collision.gameObject.name);
+        }
+    }
+
     private void ProcessInput()
     {
         float moveX = Input.GetAxisRaw("Horizontal");
@@ -32,5 +43,12 @@ public class PlayerMovement : MonoBehaviour
     private void Move()
     {
         rb.velocity = new Vector2(MoveDirection.x * MoveSpeed, MoveDirection.y * MoveSpeed);
+    }
+    private void OnCollisionEnter(Collision collision)
+    {
+        if (collision.gameObject.tag == "Enemy")
+        {
+            Debug.Log("GameOver");
+        }
     }
 }
