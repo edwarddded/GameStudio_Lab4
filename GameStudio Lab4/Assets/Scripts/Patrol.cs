@@ -33,7 +33,7 @@ public class Patrol : MonoBehaviour
 
         WaitTime = startWaitTime;
         moveSpot.position = new Vector2(Random.Range(minX, maxX), Random.Range(minY, maxY));
-        
+
     }
     // Update is called once per frame
     void Update()
@@ -55,7 +55,7 @@ public class Patrol : MonoBehaviour
     }
 
     private void OnCollisionEnter2D(Collision2D collision)
-    { 
+    {
         if (gcObject != null && gc != null) {
             if (collision.gameObject.tag == "Bullet")
             {
