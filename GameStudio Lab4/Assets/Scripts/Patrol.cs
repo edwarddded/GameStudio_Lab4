@@ -70,7 +70,7 @@ public class Patrol : MonoBehaviour
 
                     GameObject parachute1 = (GameObject)(Instantiate(parachute, gameObject.transform.position, Quaternion.identity));
 
-                    Destroy(parachute1, 1);
+                    Destroy(parachute1, 0.5f);
 
                 }
 
