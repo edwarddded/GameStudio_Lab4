@@ -77,4 +77,8 @@ public class Patrol : MonoBehaviour
             }
         }
     }
+    public void adjustSpeed( float newSpeed)
+    {
+        speed = newSpeed;
+    }
 }
